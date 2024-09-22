@@ -1,0 +1,78 @@
+h2 {
+  font-family: 'Righteous', 'cursive';
+  font-family: 'Viga', sans-serif;
+}
+
+/* Navbar */
+.navbar .container {
+  padding: 10px 0;
+  font-size: 18px;
+}
+
+li {
+  font-weight: 500;
+}
+
+.navbar .container .navbar-brand {
+  font-size: 20px;
+  font-family: 'Righteous', cursive;
+  font-family: 'Viga', sans-serif;
+}
+
+/* Home */
+.home {
+  padding-top: 10rem;
+}
+
+.home img {
+  cursor: pointer;
+}
+
+.home img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+h1 {
+  font-family: 'Righteous', cursive;
+  font-family: 'Viga', sans-serif;
+  margin-top: 25px;
+}
+
+hr {
+  width: 200px;
+  border-top: 2px solid black;
+  margin: auto;
+}
+
+.home p {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.lead {
+  margin-top: 20px;
+}
+
+section {
+  padding-top: 8rem;
+}
+
+.blog-card {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+}
+
+@media (min-width: 992px) {
+  hr {
+    width: 600px;
+    border-top: 2px solid black;
+    margin: auto;
+  }
+}
+
