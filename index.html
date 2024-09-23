@@ -19,16 +19,16 @@
 
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #6490ad;">
-      <div class="container">
-        <a class="navbar-brand" href="#">Hanifah</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #6490ad;">
+    <div class="container px-3">
+      <a class="navbar-brand" href="#">Hanifah</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
@@ -109,40 +109,37 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, iusto unde!</p>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-md-5 mb-4">
-            <div class="card">
-              <img src="img/projects/1.jpg" class="card-img-top" alt="Project1"
-                style="height: 250px; object-fit: cover;" />
-              <div class="card-body">
-                <h5>TheBox</h5>
-                <p class="card-text">Website Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-5 mb-4">
-            <div class="card">
-              <img src="img/projects/2.jpg" class="card-img-top" alt="Project2"
-                style="height: 250px; object-fit: cover;" />
-              <div class="card-body">
-                <h5>TheGaleria</h5>
-                <p class="card-text">Website Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
+      <div class="row justify-content-center">
+        <div class="col-md-5 mb-4">
+          <div class="card">
+            <img src="img/projects/1.jpg" class="card-img-top img-fluid" alt="Project1" style="object-fit: cover;" />
+            <div class="card-body">
+              <h5>TheBox</h5>
+              <p class="card-text">Website Lorem ipsum dolor sit amet.</p>
             </div>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-md-5 mb-4">
-            <div class="card">
-              <img src="img/projects/3.jpg" class="card-img-top" alt="Project3"
-                style="height: 250px; object-fit: cover;" />
-              <div class="card-body">
-                <h5>Card</h5>
-                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-              </div>
+        <div class="col-md-5 mb-4">
+          <div class="card">
+            <img src="img/projects/2.jpg" class="card-img-top img-fluid" alt="Project2" style="object-fit: cover;" />
+            <div class="card-body">
+              <h5>TheGaleria</h5>
+              <p class="card-text">Website Lorem ipsum dolor sit amet consectetur.</p>
             </div>
           </div>
         </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-5 mb-4">
+          <div class="card">
+            <img src="img/projects/3.jpg" class="card-img-top img-fluid" alt="Project3" style="object-fit: cover;" />
+            <div class="card-body">
+              <h5>Card</h5>
+              <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#fff" fill-opacity="1"
@@ -336,6 +333,21 @@
             document.querySelector("#contact-form").reset();
           }, 2000); // Simulasi waktu loading 2 detik
         });
+
+        // Get all nav-links
+          const navLinks = document.querySelectorAll('.nav-link');
+          const navbarCollapse = document.querySelector('.navbar-collapse');
+
+          // Add event listener to each nav-link
+          navLinks.forEach((link) => {
+            link.addEventListener('click', () => {
+              // Collapse the navbar after clicking a link (only for mobile view)
+              if (window.innerWidth < 992) {
+                const navbarToggler = new bootstrap.Collapse(navbarCollapse);
+                navbarToggler.hide();
+              }
+            });
+          });
     </script>
   </body>
 </html>
