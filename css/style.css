@@ -37,6 +37,7 @@ h1 {
   font-family: 'Righteous', cursive;
   font-family: 'Viga', sans-serif;
   margin-top: 25px;
+  
 }
 
 hr {
@@ -75,4 +76,93 @@ section {
     margin: auto;
   }
 }
+ .hover-effect {
+   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+ }
 
+ .hover-effect:hover {
+   transform: scale(1.1);
+   /* Zoom-in effect */
+   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+   /* Shadow effect */
+ }
+
+ .emoji {
+   position: absolute;
+   font-size: 2rem;
+   animation: fly 5s infinite linear alternate;
+ }
+
+ .ribbon-left {
+   top: 30%;
+   left: 15%;
+   animation-duration: 6s;
+ }
+
+ .flower-left {
+   top: 50%;
+   left: 15%;
+   animation-duration: 7s;
+ }
+
+ .ribbon-right {
+   top: 30%;
+   right: 15%;
+   animation-duration: 6s;
+ }
+
+ .flower-right {
+   top: 50%;
+   right: 15%;
+   animation-duration: 7s;
+ }
+
+ .flower-bottom {
+   bottom: 10%;
+   left: 50%;
+   animation-duration: 6s;
+ }
+
+ @keyframes fly {
+   0% {
+     transform: translateY(0) rotate(0deg);
+     opacity: 1;
+   }
+
+   25% {
+     transform: translateY(-15px) rotate(10deg);
+     opacity: 0.9;
+   }
+
+   50% {
+     transform: translateY(-30px) rotate(-10deg);
+     opacity: 0.8;
+   }
+
+   75% {
+     transform: translateY(-15px) rotate(10deg);
+     opacity: 0.9;
+   }
+
+   100% {
+     transform: translateY(0) rotate(0deg);
+     opacity: 1;
+   }
+ }
+
+@keyframes bounceText {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce-animation {
+  display: inline-block;
+  animation: bounceText 1.5s ease-in-out infinite;
+}
